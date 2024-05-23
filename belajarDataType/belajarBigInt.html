@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tipe Data BigInt</title>
+  </head>
+  <body>
+    <h1>Belajar Tipe Data BigInt</h1>
+    <hr />
+    <p id="bigInt"></p>
+    <p id="myInt"></p>
+    <hr />
+    <p id="Penjumlahan"></p>
+    <p id="Pengurangan"></p>
+    <p id="Pembagian"></p>
+    <p id="Perkalian"></p>
+    <p id="SisaBagi"></p>
+
+    <script>
+      const bigNumber = 123456789012345678901234567890;
+      const myInt = 123456789012345678901234567890n;
+      const bigIntButSmall = 8n;
+      let a = 15;
+      let b = 5;
+
+      //Rumus
+      const rumusPenjumlahan = a + b;
+      const rumusPengurangan = a - b;
+      const rumusPembagian = a / b;
+      const rumusPerkalian = a * b;
+      const rumusSisaBagi = a % b;
+      //Tampilkan
+      let dataBigInt = (document.getElementById("bigInt").innerHTML =
+        "Ini adalah TIPE DATA BigInt : " + bigNumber);
+      let dataMyInt = (document.getElementById("myInt").innerHTML =
+        "Ini adalah TIPE DATA MyInt : " + myInt);
+      let Penjumlahan = (document.getElementById("Penjumlahan").innerHTML =
+        a + " + " + b + " = " + rumusPenjumlahan);
+      let Pengurangan = (document.getElementById("Pengurangan").innerHTML =
+        a + " - " + b + " = " + rumusPengurangan);
+      let Pembagian = (document.getElementById("Pembagian").innerHTML =
+        a + " / " + b + " = " + rumusPembagian);
+      let Perkalian = (document.getElementById("Perkalian").innerHTML =
+        a + " * " + b + " = " + rumusPerkalian);
+      let SisaBagi = (document.getElementById("SisaBagi").innerHTML =
+        a + " % " + b + " = " + rumusSisaBagi);
+    </script>
+  </body>
+</html>

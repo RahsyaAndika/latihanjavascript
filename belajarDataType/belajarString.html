@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tipe Data String</title>
+  </head>
+  <body>
+    <h1>Belajar Tipe Data String</h1>
+    <hr />
+    <p id="string"></p>
+    <p id="escapeString"></p>
+    <p id="concat"></p>
+
+    <script>
+      let p = 12;
+      //Escape String
+      const answer = (document.getElementById("escapeString").innerHTML =
+        ' "Hari ini jum\'at Agung"');
+
+      //type of String
+      document.getElementById("string").innerHTML =
+        "Variabel p ini adalah tipe data : " + typeof p;
+
+      //String Concatering
+      let namaDepan = "Jhono";
+      let namaBelakang = "Oyee";
+      let namalengkap = namaDepan + " " + namaBelakang;
+      document.getElementById("concat").innerHTML =
+        "Nama Lengkap Saya Adalah " + namalengkap;
+    </script>
+  </body>
+</html>

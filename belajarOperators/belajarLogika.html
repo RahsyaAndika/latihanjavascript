@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Logika</title>
+  </head>
+  <body>
+    <h1>Belajar Logika Operator</h1>
+    <div>
+      <table
+        border="1"
+        style="
+          border: 1 solid black;
+          width: 50%;
+          background-color: rgb(77, 186, 229);
+        "
+      >
+        <tr>
+          <th>Opertor</th>
+          <th>Deskripsi</th>
+        </tr>
+        <tr>
+          <td align="center">&&</td>
+          <td>
+            Operator 'Dan' (and) logikanya menghasilkan nilai true apabila
+            kondisinya terpenuhi
+          </td>
+        </tr>
+        <tr>
+          <td align="center">||</td>
+          <td>
+            Operator atau (or) Logikanya akan menghasilkan nilai true apabila
+            ada salah satu kondisi terpenuhi
+          </td>
+        </tr>
+        <tr>
+          <td align="center">!</td>
+          <td>Operator tidak (not) Digunakan untuk membalikan suatu kondisi</td>
+        </tr>
+      </table>
+    </div>
+    <h3>Contoh Penggunaan Logika Operator</h3>
+    <p id="and"></p>
+    <p id="or"></p>
+    <p id="not"></p>
+
+    <script>
+      //Variabel
+      let p = 18;
+      let q = 9;
+
+      //Rumus
+      const rumusAnd = p > 16 && q < 18;
+      const rumusOr = p > 19 || q <= 9;
+      const rumusNot = !(p > 10 && q < 19);
+
+      //tampilkan
+      let and = (document.getElementById("and").innerHTML =
+        p + " > 16 && " + q + " < 18 " + " = " + rumusAnd);
+      let or = (document.getElementById("or").innerHTML =
+        p + " > 19 && " + q + " <= 9 " + " = " + rumusOr);
+      let not = (document.getElementById("not").innerHTML =
+        "!" + p + " > 10 && " + q + " < 18 " + " = " + rumusNot);
+    </script>
+  </body>
+</html>

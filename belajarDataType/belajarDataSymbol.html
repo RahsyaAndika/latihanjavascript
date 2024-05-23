@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tipe Data Symbol</title>
+  </head>
+  <body>
+    <h1>Belajar Tipe Data Symbol</h1>
+    <hr />
+    <p id="symbol"></p>
+    <p id="test"></p>
+
+    <script>
+      let id1 = Symbol("id");
+      let id2 = Symbol("id");
+      let test = id1 == id2;
+      document.getElementById("symbol").innerHTML =
+        "Variabel ini bertipe data " + typeof id1;
+      document.getElementById("test").innerHTML = "id1 == id2 " + test;
+    </script>
+  </body>
+</html>

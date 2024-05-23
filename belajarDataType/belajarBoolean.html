@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tipe Data Boolean</title>
+  </head>
+  <body>
+    <h1>Belajar Tipe Data Boolean</h1>
+    <hr />
+    <p id="boolean"></p>
+    <p id="perbandingan1"></p>
+    <p id="perbandingan2"></p>
+
+    <script>
+      let p = true;
+      let q = false;
+      let u = 16;
+      let v = 4;
+      let lebihDari = u > v;
+      let kurangDari = u < v;
+      document.getElementById("boolean").innerHTML =
+        "ini adalah tipe data " + typeof p;
+      document.getElementById("perbandingan1").innerHTML =
+        "16 > 4 = " + lebihDari;
+      document.getElementById("perbandingan2").innerHTML =
+        "16 < 4 = " + kurangDari;
+    </script>
+  </body>
+</html>
