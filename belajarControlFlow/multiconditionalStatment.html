@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiconditional Statement</title>
+  </head>
+  <body>
+    <h1>Multiconditional Statement</h1>
+    <p id="result"></p>
+    <script>
+      // Multiconditional Statement
+      function checkGrade() {
+        const nilai = parseInt(prompt("Masukkan Nilai mu (1-100):"));
+        let result;
+        if (nilai >= 90) {
+          result = "A";
+        } else if (nilai >= 80) {
+          result = "B";
+        } else if (nilai >= 70) {
+          result = "C";
+        } else if (nilai >= 60) {
+          result = "D";
+        } else {
+          result = "F";
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `Nilai mu adalah ${result}.`;
+      }
+
+      // Call the function
+      checkGrade();
+    </script>
+  </body>
+</html>

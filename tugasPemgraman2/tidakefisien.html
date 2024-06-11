@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name) {
+          this.name = name;
+          this.type = "animal"; // Data yang tidak digunakan
+          this.age = null; // Data yang tidak digunakan
+        }
+
+        speak() {
+          console.log("${this.name} makes a noise.");
+        }
+
+        getAge() {
+          // Getter yang tidak digunakan
+          return this.age;
+        }
+
+        setAge(age) {
+          // Setter yang tidak digunakan
+          this.age = age;
+        }
+      }
+
+      class Dog extends Animal {
+        constructor(name) {
+          super(name);
+          this.hasTail = true; // Data yang tidak digunakan
+        }
+
+        speak() {
+          console.log("${this.name} barks.");
+        }
+      }
+
+      const dog = new Dog("Rex");
+      dog.speak(); // Rex barks.
+    </script>
+  </body>
+</html>

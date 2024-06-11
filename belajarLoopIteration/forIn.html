@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Perulangan For...in</title>
+  </head>
+  <body>
+    <h1>Perulangan For...in</h1>
+    <ul id="result"></ul>
+
+    <script>
+      let colors = {
+        red,
+        green,
+        blue,
+        yellow,
+        orange,
+      };
+
+      let result = "";
+      for (let color in colors) {
+        result += "<li>" + color + ": " + colors[color] + "</li>";
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

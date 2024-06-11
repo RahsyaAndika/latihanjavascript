@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas</title>
+  </head>
+  <body>
+    <script>
+      // Variabel untuk data diri
+      let firstName = "Rahsya";
+      let lastName = "Rahsya Andika";
+      let age = 18;
+      let isMarried = false;
+
+      // Pengujian menggunakan console.log()
+      console.log("Nama depan: " + firstName);
+      console.log("Nama belakang: " + lastName);
+      console.log("Umur: " + age);
+      console.log("Status perkawinan: " + isMarried);
+
+      // Pengujian menggunakan innerHTML pada HTML
+      let html = `
+  <h1>Data Diri</h1>
+  <p>Nama depan: ${firstName}</p>
+  <p>Nama belakang: ${lastName}</p>
+  <p>Umur: ${age}</p>
+  <p>Status perkawinan: ${isMarried}</p>
+`;
+
+      // Pengujian menggunakan document.write()
+      document.write("<h1>Data Diri</h1>");
+      document.write("<p>Nama depan: " + firstName + "</p>");
+      document.write("<p>Nama belakang: " + lastName + "</p>");
+      document.write("<p>Umur: " + age + "</p>");
+      document.write("<p>Status perkawinan: " + isMarried + "</p>");
+    </script>
+  </body>
+</html>

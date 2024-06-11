@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loop</title>
+  </head>
+  <body>
+    <h1>Menampilkan Nama dan Urutan</h1>
+    <p id="result"></p>
+    <script>
+      let nama = "Rahsya";
+      let result = "";
+
+      // Menampilkan nama sebanyak 50 kali
+      for (let i = 0; i < 50; i++) {
+        result += nama + "<br>";
+      }
+
+      // Menampilkan urutan dari nomor 50 ke nomor 1
+      for (let i = 50; i >= 1; i--) {
+        result += i + ". " + nama + "<br>";
+      }
+
+      // Menampilkan hasil di elemen HTML
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Menggabungkan</title>
+  </head>
+  <body>
+    <h1>Menggabungkan Multiconditional dan Switch Style</h1>
+    <p id="result"></p>
+    <script>
+      // Multiconditional Statement
+      function checkNilai() {
+        const nilai = parseInt(prompt("Masukkan Nilaimu (1-100):"));
+        let result;
+        if (nilai >= 90) {
+          result = "A";
+        } else if (nilai >= 80) {
+          result = "B";
+        } else if (nilai >= 70) {
+          result = "C";
+        } else if (nilai >= 60) {
+          result = "D";
+        } else {
+          result = "F";
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `Nilai mu Adalah  ${result}.`;
+      }
+
+      // Switch Style
+      function checkHari() {
+        const hari = parseInt(prompt("Masukkan Hari ini (1-7):"));
+        let result;
+        switch (hari) {
+          case 1:
+            result = "Senin";
+            break;
+          case 2:
+            result = "Selasa";
+            break;
+          case 3:
+            result = "Rabu";
+            break;
+          case 4:
+            result = "Kamis";
+            break;
+          case 5:
+            result = "Jumat";
+            break;
+          case 6:
+            result = "Sabtu";
+            break;
+          case 7:
+            result = "Minggu";
+            break;
+          default:
+            result = "Invalid day";
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `Hari ini adalah ${result}.`;
+      }
+
+      // Panggil functions
+      checkNilai();
+      checkHari();
+    </script>
+  </body>
+</html>

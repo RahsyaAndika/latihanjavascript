@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>enkapsulasi</title>
+  </head>
+  <body>
+    <script>
+      // Class: BankAccount
+      class BankAccount {
+        // Private properties
+        balance = 0;
+
+        // Constructor
+        constructor(initialBalance) {
+          this.balance = initialBalance;
+        }
+
+        // Public method: deposit
+        deposit(amount) {
+          this.balance += amount;
+        }
+
+        // Public method: withdraw
+        withdraw(amount) {
+          if (amount > this.balance) {
+            console.log("Insufficient balance");
+          } else {
+            this.balance -= amount;
+          }
+        }
+
+        // Public method: getBalance
+        getBalance() {
+          return this.balance;
+        }
+      }
+
+      // Create an instance of BankAccount
+      let myAccount = new BankAccount(1000);
+
+      // Deposit money
+      myAccount.deposit(500);
+      console.log(myAccount.getBalance()); // Output: 1500
+
+      // Withdraw money
+      myAccount.withdraw(200);
+      console.log(myAccount.getBalance()); // Output: 1300
+
+      // Try to access private property directly
+      console.log(myAccount.balance); // Error: Private property cannot be accessed
+    </script>
+  </body>
+</html>

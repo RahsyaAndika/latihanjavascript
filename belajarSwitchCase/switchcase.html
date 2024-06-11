@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Case</title>
+  </head>
+  <body>
+    <h1>Pilih Opsi Matkul yang Anda Inginkan</h1>
+    <form>
+      <select id="choice">
+        <option value="1">Diskrit</option>
+        <option value="2">Algoritma</option>
+        <option value="3">Struktur Data</option>
+        <option value="4">Desain Perangkat</option>
+        <option value="5">Arsitektur Komputer</option>
+        <option value="6">Pemograman</option>
+        <option value="7">Kalkulus</option>
+      </select>
+      <button id="submit">Submit</button>
+      <p id="result"></p>
+    </form>
+    <script>
+      let choice;
+
+      // Mendapatkan input dari pengguna
+      document.getElementById("submit").addEventListener("click", function () {
+        choice = document.getElementById("choice").value;
+
+        // Menggunakan switch-case untuk memproses input
+        switch (choice) {
+          case "1":
+            document.getElementById("result").innerHTML =
+              "Anda memilih Diskrit";
+            break;
+          case "2":
+            document.getElementById("result").innerHTML =
+              "Anda memilih Algoritma";
+            break;
+          case "3":
+            document.getElementById("result").innerHTML =
+              "Anda memilih Struktur Data";
+            break;
+          case "4":
+            document.getElementById("result").innerHTML =
+              "Anda memilih Desain Perangkat";
+            break;
+          case "5":
+            document.getElementById("result").innerHTML =
+              "Anda memilih arsitektur";
+            break;
+          case "6":
+            document.getElementById("result").innerHTML =
+              "Anda memilih Pemograman";
+            break;
+          case "7":
+            document.getElementById("result").innerHTML =
+              "Anda memilih Kalkulus";
+            break;
+          default:
+            document.getElementById("result").innerHTML =
+              "Pilihan tidak valid.";
+        }
+      });
+    </script>
+  </body>
+</html>

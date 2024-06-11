@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Perulangan Do While</title>
+  </head>
+  <body>
+    <h1>Perulangan Do While</h1>
+    <p id="result"></p>
+
+    <script>
+      let i = 1;
+      let result = "";
+
+      do {
+        result += "Perulangan ke-" + i + "<br>";
+        i++;
+      } while (i <= 5);
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

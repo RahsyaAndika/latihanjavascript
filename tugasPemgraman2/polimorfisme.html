@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>polimorfisme</title>
+  </head>
+  <body>
+    <script>
+      // Klasifikasi Shape
+      class Shape {
+        constructor(name) {
+          this.name = name;
+        }
+
+        draw() {
+          console.log("Drawing a shape.");
+        }
+      }
+
+      // Klasifikasi Circle yang mengwariskan dari Shape
+      class Circle extends Shape {
+        constructor(name, radius) {
+          super(name);
+          this.radius = radius;
+        }
+
+        draw() {
+          console.log(`Drawing a circle with radius ${this.radius}.`);
+        }
+      }
+
+      // Klasifikasi Rectangle yang mengwariskan dari Shape
+      class Rectangle extends Shape {
+        constructor(name, width, height) {
+          super(name);
+          this.width = width;
+          this.height = height;
+        }
+
+        draw() {
+          console.log(
+            `Drawing a rectangle with width ${this.width} and height ${this.height}.`
+          );
+        }
+      }
+
+      // Membuat objek Circle
+      const circle = new Circle("Circle", 5);
+      circle.draw(); // Output: Drawing a circle with radius 5.
+
+      // Membuat objek Rectangle
+      const rectangle = new Rectangle("Rectangle", 10, 20);
+      rectangle.draw(); // Output: Drawing a rectangle with width 10 and height 20.
+
+      // Membuat array dari objek Shape
+      const shapes = [circle, rectangle];
+
+      // Menggunakan method draw() untuk setiap objek dalam array
+      shapes.forEach((shape) => shape.draw());
+      // Output:
+      // Drawing a circle with radius 5.
+      // Drawing a rectangle with width 10 and height 20.
+    </script>
+  </body>
+</html>

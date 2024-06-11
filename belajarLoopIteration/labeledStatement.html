@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Labeled Statement</title>
+  </head>
+  <body>
+    <h1>Labeled Statement</h1>
+    <p id="result"></p>
+
+    <script>
+      let i = 0;
+      let result = "";
+
+      outerLoop: for (i = 0; i < 10; i++) {
+        innerLoop: for (let j = 0; j < 3; j++) {
+          if (i === 5) {
+            break outerLoop;
+          }
+          result += "Perulangan ke-" + i + ", perulangan ke-" + j + "<br>";
+        }
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

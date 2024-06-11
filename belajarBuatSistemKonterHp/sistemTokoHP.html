@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko HP</title>
+  </head>
+  <body>
+    <h1>Handphone MASS</h1>
+    <h2>Products</h2>
+    <ul id="products">
+      <!-- List of products will be displayed here -->
+    </ul>
+    <h2>Cart</h2>
+    <ul id="cart">
+      <!-- Cart items will be displayed here -->
+    </ul>
+    <h2>Total Price</h2>
+    <p id="total-price"></p>
+    <button id="checkout">Checkout</button>
+    <script>
+      // List of products
+      const products = [
+        { name: "Samsung Galaxy S21", price: 10000000 },
+        { name: "Apple iPhone 14", price: 12000000 },
+        { name: "Xiaomi Redmi", price: 5000000 },
+        { name: "Oppo Reno", price: 7000000 },
+        { name: "Vivo V", price: 6000000 },
+        { name: "Tablet", price: 3000000 },
+        { name: "Smartwatch", price: 2000000 },
+        { name: "Headphones", price: 1000000 },
+        { name: "Phone Case", price: 500000 },
+        { name: "Screen Protector", price: 200000 },
+        { name: "Power Bank", price: 1500000 },
+        { name: "Wireless Charging Pad", price: 1000000 },
+      ];
+
+      // Function to add product to cart
+      function addProductToCart(product) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCart();
+      }
+
+      // Function to update cart
+      function updateCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartHTML = cart
+          .map((product) => {
+            return `<li>${product.name} - Rp. ${product.price}</li>`;
+          })
+          .join("");
+        document.getElementById("cart").innerHTML = cartHTML;
+        updateTotalPrice();
+      }
+
+      // Function to update total price
+      function updateTotalPrice() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let totalPrice = 0;
+        cart.forEach((product) => {
+          totalPrice += product.price;
+        });
+        document.getElementById("total-price").innerHTML = `Rp. ${totalPrice}`;
+      }
+
+      // Function to checkout
+      function checkout() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if (cart.length > 0) {
+          alert("Checkout successful!");
+          localStorage.removeItem("cart");
+          updateCart();
+        } else {
+          alert("Cart is empty!");
+        }
+      }
+
+      // Add event listener to add product to cart
+      document.getElementById("products").addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+          const product = products.find(
+            (product) => product.name === event.target.textContent
+          );
+          addProductToCart(product);
+        }
+      });
+
+      // Add event listener to checkout
+      document.getElementById("checkout").addEventListener("click", checkout);
+
+      // Initialize cart
+      updateCart();
+    </script>
+  </body>
+</html>

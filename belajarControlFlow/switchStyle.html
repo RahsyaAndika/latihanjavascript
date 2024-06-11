@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Style</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Switch Style</h1>
+    <p id="result"></p>
+    <script>
+      // Switch Statement
+      function checkhari() {
+        const hari = parseInt(prompt("Masukkan Hari (1-7):"));
+        let result;
+        switch (hari) {
+          case 1:
+            result = "Senin";
+            break;
+          case 2:
+            result = "Selasa";
+            break;
+          case 3:
+            result = "Rabu";
+            break;
+          case 4:
+            result = "Kamis";
+            break;
+          case 5:
+            result = "Jum`at";
+            break;
+          case 6:
+            result = "Sabtu";
+            break;
+          case 7:
+            result = "Minggu";
+            break;
+          default:
+            result = "Invalid day";
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `Hari ini Adalah ${result}.`;
+      }
+
+      // Call the function
+      checkhari();
+    </script>
+  </body>
+</html>

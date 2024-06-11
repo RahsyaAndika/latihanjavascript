@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRAY</title>
+  </head>
+  <body>
+    <h1>Menampilkan Data Teman dan Hobi</h1>
+    <p id="result"></p>
+    <button id="addTeman">Tambah Teman</button>
+    <button id="hapusTeman">Hapus Teman</button>
+    <script>
+      // script.js
+      let teman = ["Radhiyan", "Fahmi", "Rizal"];
+
+      let hobi = ["Renang", "Ngopi", "Ngrokok"];
+
+      // Menampilkan data teman dan hobi
+      document.getElementById("result").innerHTML = `
+    <h2>Data Teman</h2>
+    <ul>
+        ${teman.map((nama, index) => `<li>${index + 1}. ${nama}</li>`).join("")}
+    </ul>
+    <h2>Data Hobi</h2>
+    <ul>
+        ${hobi.map((hobi, index) => `<li>${index + 1}. ${hobi}</li>`).join("")}
+    </ul>
+`;
+
+      // Tambahkan teman baru
+      document
+        .getElementById("addTeman")
+        .addEventListener("click", function () {
+          let namaTeman = prompt("Masukkan nama teman baru:");
+          teman.push(namaTeman);
+          document.getElementById("result").innerHTML = `
+        <h2>Data Teman</h2>
+        <ul>
+            ${teman
+              .map((nama, index) => `<li>${index + 1}. ${nama}</li>`)
+              .join("")}
+        </ul>
+        <h2>Data Hobi</h2>
+        <ul>
+            ${hobi
+              .map((hobi, index) => `<li>${index + 1}. ${hobi}</li>`)
+              .join("")}
+        </ul>
+    `;
+        });
+
+      // Hapus teman
+      document
+        .getElementById("hapusTeman")
+        .addEventListener("click", function () {
+          let namaTeman = prompt("Masukkan nama teman yang ingin dihapus:");
+          let index = teman.indexOf(namaTeman);
+          if (index !== -1) {
+            teman.splice(index, 1);
+            document.getElementById("result").innerHTML = `
+            <h2>Data Teman</h2>
+            <ul>
+                ${teman
+                  .map((nama, index) => `<li>${index + 1}. ${nama}</li>`)
+                  .join("")}
+            </ul>
+            <h2>Data Hobi</h2>
+            <ul>
+                ${hobi
+                  .map((hobi, index) => `<li>${index + 1}. ${hobi}</li>`)
+                  .join("")}
+            </ul>
+        `;
+          } else {
+            alert("Teman tidak ditemukan.");
+          }
+        });
+    </script>
+  </body>
+</html>

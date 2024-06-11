@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Operator</title>
+  </head>
+  <body>
+    <h1>Menggabungkan Array</h1>
+    <p id="result"></p>
+    <script>
+      // script.js
+      let array1 = ["Apple", "Banana", "Cherry"];
+      let array2 = ["Date", "Elderberry", "Fig"];
+
+      // Menggabungkan array menggunakan Spread operator
+      let arrayGabungan = [...array1, ...array2];
+
+      // Menampilkan data array gabungan
+      document.getElementById("result").innerHTML = `
+    <h2>Data Array Gabungan</h2>
+    <ul>
+        ${arrayGabungan
+          .map((item, index) => `<li>${index + 1}. ${item}</li>`)
+          .join("")}
+    </ul>
+`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <h1>Profil</h1>
+    <p id="result"></p>
+    <script>
+      const biodata = {
+        nama: "Rahsya",
+        prodi: "RPL",
+      };
+
+      // Menampilkan profil
+      document.getElementById("result").innerHTML = `
+        <h2>Profil</h2>
+        <p>Nama: ${biodata.nama}</p>
+        <p>Prodi: ${biodata.prodi}
+    `;
+    </script>
+  </body>
+</html>
