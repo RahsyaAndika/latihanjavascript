@@ -1,0 +1,28 @@
+body{
+   text-align: center;
+    font-family: monospace;
+    background: linear-gradient(to right, #FF7F50, #FCE883);
+}
+#input-container {
+    display: none;
+  }
+  input[type="text"] {
+    font-size: 25px;
+    width: 209px; 
+    height: 35px;
+  }
+  
+  .button {
+    background-color: green;
+    color: #ffffff; 
+    border: none;
+    padding: 10px 10px; 
+    font-size: 15px; 
+    cursor: pointer; 
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #3e8e41; 
+  }
+  

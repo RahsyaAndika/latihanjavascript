@@ -1,0 +1,70 @@
+/* style.css */
+body{
+  text-align: center;
+   font-family: monospace;
+   background: linear-gradient(to right, #FF7F50, #FCE883);
+}
+.puzzle-container {
+  background-image: url("../img/level-1.jpg");
+  width: 500px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 3px solid #000000;
+}
+
+.puzzle-cell {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+}
+
+.puzzle-piece {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  cursor: move;
+  display: inline-block;
+}
+.container-puzzlepiece {
+  width: 750px;
+  height: 750;
+  justify-content: center;
+  margin-left: 200px;
+}
+
+.puzzle-piece.dragging {
+  opacity: 0.5;
+}
+
+#input-container {
+  display: none;
+}
+input[type="text"] {
+  font-size: 50px;
+  width: 820px; 
+  height: 55px;
+}
+
+.button {
+  background-color: green;
+  color: #ffffff; 
+  border: none;
+  padding: 20px 25px; 
+  font-size: 25px; 
+  cursor: pointer; 
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #3e8e41; 
+}
